@@ -36,7 +36,6 @@ header {
   flex-wrap: wrap;
   align-items: center;
   background-color: var(--dark);
-  box-shadow: lightgray;
 }
 
 header h1 {
@@ -64,7 +63,7 @@ nav a {
   text-decoration: none;
   padding: 0px 12px;
   margin: 5px;
-  color: var(--gray);
+  color: var(--pink);
   background-image: linear-gradient(var(--dark), var(--light));
   background-repeat: no-repeat;
   background-size: 100% 2px;
@@ -83,16 +82,11 @@ main {
   margin-bottom: 45px;
 }
 
-.light {
-  color: var(--light);
-}
-
 .hero-banner {
-  background: rgb(68, 88, 120);
+  background: var(--dkblue);
   background-image: url("./images/header.png");
   background-size: cover;
   background-position: center;
-  background-blend-mode: soft-light;
   min-height: 50vh;
   color: var(--light);
   padding: 2% 6%;
@@ -135,11 +129,12 @@ main {
 }
 
 .page-section > h2 {
+  color:var(--dark);
   flex: 0 0 20%;
   text-align: right;
   padding-right: 15px;
-  border-right: 4px solid var(--dkblue);
-  font-size: vw;
+  border-right: 5px solid var(--dkblue);
+  font-size: 200%;
   line-height: 1.1;
 }
 
@@ -149,7 +144,7 @@ main {
 
 .page-section p {
   margin-bottom: 20px;
-  color: black;
+  color: var(--dkblue);
 }
 
 .project-container {
@@ -232,7 +227,7 @@ main {
   font-size: 1.1rem;
   font-style: normal;
   border-radius: 6px;
-  background-image: linear-gradient(var(--dkpink), var(--light));
+  background-image: linear-gradient(var(--pink), var(--light));
   background-repeat: no-repeat;
   background-size: 100% 2px;
   background-position: bottom;
