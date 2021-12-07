@@ -1,7 +1,9 @@
+/* Tells the browser to account for any border and padding. */
 * {
   box-sizing: border-box;
 }
 
+/* Sets color variables for use throughout the page */
 :root {
   --pink: #e5bcc4;
   --gray:#a4abbd;
@@ -82,7 +84,7 @@ main {
   margin-bottom: 45px;
 }
 
-.hero-banner {
+.banner {
   background: var(--dkblue);
   background-image: url("./images/header.png");
   background-size: cover;
@@ -97,11 +99,11 @@ main {
   padding-left: 10vw;
 }
 
-.hero-banner div {
+.banner div {
   flex: 0 0 90%;
 }
 
-.hero-banner h2 {
+.banner h2 {
   background-color: var(--gray);
   color: var(--dkblue);
   border-radius: 6px;
@@ -178,7 +180,7 @@ main {
 }
 
 .project:hover {
-  background-color: var(--dkpink);
+  background-color: var(--dkpink), opacity:0.5;;
   border-radius: 6px;
 }
 
@@ -191,23 +193,23 @@ main {
   font-size: 140%;
 }
 
-.project1 {
+#project1 {
   background-image: url("../assets/images/placeholder-1.png");
 }
 
-.project2 {
+#project2 {
   background-image: url("../assets/images/placeholder-2.png");
 }
 
-.project3 {
+#project3 {
   background-image: url("../assets/images/placeholder-3.png");
 }
 
-.project4 {
+#project4 {
   background-image: url("../assets/images/placeholder-4.png");
 }
 
-.project5 {
+#project5 {
   background-image: url("../assets/images/placeholder-5.png"); 
 }
 
@@ -223,14 +225,14 @@ main {
   color: var(--dkblue);
   padding: 0px 12px;
   margin: 5px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-style: normal;
-  border-radius: 6px;
   background-image: linear-gradient(var(--pink), var(--light));
   background-repeat: no-repeat;
   background-size: 100% 2px;
   background-position: bottom;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-style: normal;
+  border-radius: 6px;
   transition: all 0.1s ease-in;
   display: inline-block;
 }
@@ -250,8 +252,8 @@ footer  {
 
 @media screen and (max-width: 980px) {
   header {
-      padding: 0 0 10px 0;
       justify-content: center;
+      padding: 0 0 10px 0;
       text-align: center;
   }
 
@@ -277,18 +279,18 @@ footer  {
       margin-bottom: 20px;
       padding-bottom: 10px;
       text-align: left;
-      font-size: 7vw;
+      font-size: 145%;
   }
 
   .hero-banner {
       flex-direction: column;
       justify-content: space-between;
-      align-items: center;
-      text-align: center;
       padding-left: 50px;
+      text-align: center;
+      align-items: center;
   }
 }
-
+/* sets layouts to adjust as the screen size gets smaller */
 @media screen and (max-width: 768px) {
   .grid-item,
   .grid-item:first-child {
