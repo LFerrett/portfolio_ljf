@@ -13,6 +13,7 @@
   --dkpink: #ad878e;
 }
 
+/* Defines body styles, including a Google Font */
 body {
   margin: 0;
   padding: 0;
@@ -22,6 +23,7 @@ body {
   line-height: 1.5;
 }
 
+/* Puts 0 margins for headers and paragraphs */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
@@ -30,6 +32,7 @@ p {
   margin: 0;
 }
 
+/* Defines header styles */
 header {
   display: flex;
   flex-direction: row;
@@ -54,6 +57,7 @@ header a:hover {
   color: var(--light);
 }
 
+/* Styles the navigation, including placement and hover properties, giving a gradient background that grows */
 nav {
   display: flex;
   flex-direction: row;
@@ -84,12 +88,13 @@ main {
   margin-bottom: 45px;
 }
 
+/* Sets style for banner, including image background positioning*/
 .banner {
   background: var(--dkblue);
   background-image: url("./images/header.png");
   background-size: cover;
   background-position: center;
-  min-height: 50vh;
+  min-height: 40vh;
   color: var(--light);
   padding: 2% 6%;
   display: flex;
@@ -114,7 +119,8 @@ main {
   display: inline;
 }
 
-.page-wrapper {
+/* Creates a container for the main content of the pain */
+.page-container {
   max-width: 85%;
   margin-left: auto;
   margin-right: auto;
@@ -144,11 +150,26 @@ main {
   flex: 0 0 75%;
 }
 
+.page-section img {
+  float: left;
+  border-style: solid;
+  border-width: 6px;
+  border-color: var(--gray);
+  margin-right: 20px;
+}
+
+.page-section img:hover {
+  border-radius: 6px;
+  border-style: solid;
+  border-color: var(--dkpink);
+}
+
 .page-section p {
   margin-bottom: 20px;
   color: var(--dkblue);
 }
 
+/* Styles the projects into a grid with border and image changing on hover. Project grid is set to have the top, featured project as the first child, to take up the full length of the grid */
 .project-container {
   display: grid;
   column-gap: 10px;
@@ -213,6 +234,7 @@ main {
   background-image: url("../assets/images/placeholder-5.png"); 
 }
 
+/* Styles the contact info section, including the background changing on hover */
 .contact contact-info {
   display: flex;
   flex-wrap: wrap;
@@ -242,6 +264,7 @@ main {
   background-size: 100% 100%;
 }
 
+/* Makes footer centered and small*/
 footer  {
   text-align: center;
   font-size: 12px;
@@ -250,38 +273,35 @@ footer  {
   margin-bottom: 10px;
 }
 
+/* Sets layouts to adjust as the screen size gets smaller */
 @media screen and (max-width: 980px) {
   header {
       justify-content: center;
       padding: 0 0 10px 0;
       text-align: center;
   }
-
   header h1 {
       width: 100%;
       padding: 5px;
       margin-bottom: 10px;
       font-size: 10vw;
   }
-
   header nav {
       justify-content: center;
   }
-
   .page-section > h2,
   .page-section > div {
       flex: 0 0 100%;
   }
-
   .page-section > h2 {
       border-right: none;
+      text-align: left;
+      font-size: 145%;
       border-bottom: 4px solid var(--pink);
       margin-bottom: 20px;
       padding-bottom: 10px;
-      text-align: left;
-      font-size: 145%;
+      
   }
-
   .hero-banner {
       flex-direction: column;
       justify-content: space-between;
@@ -290,7 +310,6 @@ footer  {
       align-items: center;
   }
 }
-/* sets layouts to adjust as the screen size gets smaller */
 @media screen and (max-width: 768px) {
   .grid-item,
   .grid-item:first-child {
