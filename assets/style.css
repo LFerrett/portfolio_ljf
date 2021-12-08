@@ -13,6 +13,11 @@
   --dkpink: #ad878e;
 }
 
+/* Makes the page scroll more pleasing */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Defines body styles, including a Google Font */
 body {
   margin: 0;
@@ -53,9 +58,6 @@ header h1 {
   line-height: 1;
 }
 
-header a:hover {
-  color: var(--light);
-}
 
 /* Styles the navigation, including placement and hover properties, giving a gradient background that grows */
 nav {
@@ -169,7 +171,7 @@ main {
   color: var(--dkblue);
 }
 
-/* Styles the projects into a grid with border and image changing on hover. Project grid is set to have the top, featured project as the first child, to take up the full length of the grid */
+/* Styles the projects into a grid with border and opacity changing on hover. Project grid is set to have the top, featured project as the first child, to take up the full length of the grid */
 .project-container {
   display: grid;
   column-gap: 10px;
@@ -180,9 +182,8 @@ main {
 }
 
 .project {
-  border: 5px solid var(--gray);
   grid-column: span 6;
-  background-color: var(--pink);
+  border: 5px solid var(--gray);
   color: var(--dkblue);
   min-height: 100px;
   display: flex;
@@ -201,11 +202,13 @@ main {
 }
 
 .project:hover {
-  background-color: var(--dkpink), opacity:0.5;;
+  border-color: var(--dkpink);
+  opacity:75%;
   border-radius: 6px;
 }
 
 .project div {
+  color:var(--dark);
   background-color: var(--gray);
   padding: 8px 10px;
 }
@@ -310,15 +313,15 @@ footer  {
       align-items: center;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
   .grid-item,
   .grid-item:first-child {
       grid-column: 1 / -1;
   }
 
   .grid-container {
-      grid-auto-rows: minmax(200px, 1fr);
-  }
+    grid-auto-rows: minmax(200px, 1fr);
+}
 
   .contact address {
       flex-direction: column;
