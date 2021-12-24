@@ -28,6 +28,58 @@ body {
   line-height: 1.5;
 }
 
+/* Button styling */
+button {
+  background: var(--dkpink);
+  color:#fff;
+  text-decoration: none;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+
+button a {
+  text-decoration: none;
+  color: var(--dkblue);
+  padding: 0px 2px;
+  margin: 5px;
+  font-size: 1.1rem;
+  font-style: normal;
+}
+
+button:hover {
+  background-color:var(--light);
+  color: var(--dkpink);
+}
+
+button:before,button:after {
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background-color:var(--dkpink);
+  transition:400ms ease all;
+}
+
+button:after {
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+
+button:hover:before,button:hover:after {
+  width:100%;
+  transition:800ms ease all;
+}
+
 /* Puts 0 margins for headers and paragraphs */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -191,7 +243,7 @@ main {
   padding: 0 0 20px 0;
   text-decoration: none;
   background-blend-mode: soft-light;
-  background-size: 150%;
+  background-size: 100%;
   transition: all 0.5s;
   font-size: 0.8rem;
 }
@@ -223,6 +275,7 @@ main {
 
 #project1 {
   background-image: url("../assets/images/placeholder-1.png");
+  background-size: 100%;
 }
 
 #project2 {
@@ -262,6 +315,7 @@ main {
   height: 100%;
 }
 
+ /* Old Styles for nav
 .contact contact-info a {
   color: var(--dkblue);
   padding: 0px 12px;
@@ -282,9 +336,10 @@ main {
   color: var(--dkblue);
   background-size: 100% 100%;
 }
+/*
 
 /* Makes footer centered and small*/
-footer  {
+footer {
   text-align: center;
   font-size: 12px;
   text-decoration: italic;
