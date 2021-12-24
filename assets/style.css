@@ -196,6 +196,10 @@ main {
   font-size: 0.8rem;
 }
 
+.project a {
+  text-decoration: none;
+}
+
 .project:first-child {
   grid-column: span 12;
   grid-row: span 2;
@@ -227,6 +231,18 @@ main {
 
 #project3 {
   background-image: url("../assets/images/placeholder-3.png");
+}
+
+#project1:hover {
+  background-image: url("../assets/images/weather.png");
+}
+
+#project2:hover {
+  background-image: url("../assets/images/hex.png");
+}
+
+#project3:hover {
+  background-image: url("../assets/images/dog.png");
 }
 
 #project4 {
